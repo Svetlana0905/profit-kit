@@ -9,29 +9,10 @@
    margin: 0 auto;
    overflow: hidden;
 
-   &__wrapper {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      display: flex;
-      transition-property: transform;
-      box-sizing: content-box;
+   &__swiper-wrapper {
+      background-position: center;
+      background-size: cover;
    }
-
-   &__swiper-slide {
-      position: relative;
-   }
-
-   // &__action-block {
-   //    position: absolute;
-   //    display: flex;
-   //    flex-direction: column;
-   //    gap: 5px;
-   //    right: 12px;
-   //    top: 26px;
-   //    width: 34px;
-   // }
 
    &__swiper-pagination {
       bottom: 0;
