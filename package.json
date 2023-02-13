@@ -23,7 +23,7 @@
   ],
   "author": "",
   "license": "ISC",
-  "homepage": "",
+  "homepage": "https://svetlana0905.github.io/profit-kit",
   "devDependencies": {
     "@babel/core": "^7.19.1",
     "@babel/polyfill": "^7.12.1",
