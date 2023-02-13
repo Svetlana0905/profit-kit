@@ -1,0 +1,22 @@
+.price {
+   font-weight: 700;
+   font-size: 20px;
+   text-transform: uppercase;
+   align-self: flex-end;
+}
+
+.old-price {
+   font-weight: 400;
+   font-size: 14px;
+   color: $grayColorPrice;
+   text-decoration-line: line-through;
+   text-transform: uppercase;
+}
+
+.subtitle {
+   font-size: 14px;
+   text-align: center;
+   font-weight: 400;
+   line-height: 20px;
+   color: $blackColor;
+}

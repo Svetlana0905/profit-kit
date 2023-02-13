@@ -1,0 +1,62 @@
+.card-link {
+   position: relative;
+   font-size: 18px;
+   line-height: 26px;
+   font-size: 24px;
+   line-height: 34px;
+   color: $secondAccentColor;
+   transition: all 280ms linear;
+
+   @include media(1024) {
+      font-size: 16px;
+      line-height: 26px;
+   }
+
+   @include media(768) {
+      font-size: 14px;
+      line-height: 22px;
+   }
+
+   &::after {
+      position: absolute;
+      content: '';
+      height: 2px;
+      width: 100%;
+      left: 0;
+      bottom: -5px;
+      border-bottom: 1px dashed $primaryGrayColor;
+      transition: all 280ms linear;
+   }
+
+   &:hover {
+      color: $blackColor;
+
+      &::after {
+         width: 0;
+      }
+   }
+
+   &.active,
+   &:focus {
+      font-weight: 700;
+      color: $blackColor;
+      font-size: 34px;
+      line-height: 40px;
+      text-transform: uppercase;
+      border-bottom: none;
+
+      &::after {
+         width: 0;
+      }
+
+      @include media(1024) {
+         font-size: 24px;
+         line-height: 26px;
+      }
+
+      @include media(768) {
+         font-size: 18px;
+         line-height: 26px;
+      }
+   }
+}

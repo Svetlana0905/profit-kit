@@ -1,0 +1,253 @@
+.container-swiper {
+  max-width: $containerWidth;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+
+  &__btn-block {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 46%;
+    z-index: 1000;
+
+    @include media(768) {
+      display: none;
+    }
+  }
+}
+
+.swiper {
+  max-width: 1396px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  box-sizing: content-box;
+}
+
+.swiper-slide {
+  position: relative;
+  display: flex;
+  font-size: 18px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__slide {
+    border: $primaryBorder;
+    border-radius: $primaryRadius;
+  }
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.info-block {
+  display: flex;
+  flex-direction: column;
+
+  &__hit,
+  &__new {
+    width: 50px;
+    height: 50px;
+
+    & span {
+      display: flex;
+      width: 100px;
+      height: 50px;
+      font-size: 14px;
+      padding: 10px;
+      background: $whiteColor80;
+      border-radius: $primaryRadius;
+      transform: scale(0);
+      transition: $standartTrans;
+    }
+
+    &:hover span {
+      transform: scale(1);
+      box-shadow: $blackBoxShadow;
+    }
+
+  }
+
+  &__hit {
+    width: 50px;
+    height: 50px;
+    background: url(../images/icons/sticker_hit.svg) center/cover;
+  }
+
+  &__new {
+    background: url(../images/icons/sticker_new.svg);
+  }
+}
+
+.top-info-block {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  &__info-block {
+    background: transparent;
+    padding: 19px;
+  }
+
+  &__action-block {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 46px;
+    padding-top: 27px;
+  }
+}
+
+.slide {
+  &__content-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 162px;
+    padding: 12px 25px 24px;
+  }
+
+  &__bottom-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5px;
+    align-self: flex-end;
+    width: 100%;
+
+    @include media(375) {
+      justify-content: center;
+    }
+  }
+
+  &__count-block {
+    display: flex;
+    border: $primaryBorder;
+    border-radius: $primaryRadius;
+
+    @include media(375) {
+      display: none;
+    }
+  }
+}
+
+.price-block {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: flex-end;
+  padding-bottom: 12px;
+
+  &__old-price {
+    padding-left: 9px;
+    padding-top: 9px;
+  }
+}
+
+.count-block {
+  max-width: 98px;
+  width: 100%;
+  height: 49px;
+
+  &__minus-btn,
+  &__plus-btn,
+  &__current-count {
+    position: relative;
+    width: 33.33%;
+    height: 100%;
+    text-align: center;
+    background: transparent;
+  }
+
+  &__minus-btn::before {
+    position: absolute;
+    content: '';
+    width: 12px;
+    height: 2px;
+    left: 12px;
+    top: 23px;
+    background: $blackColor;
+
+  }
+
+  &__plus-btn::after,
+  &__plus-btn::before {
+    position: absolute;
+    content: '';
+    width: 12px;
+    height: 2px;
+    left: 7px;
+    top: 23px;
+    background: $blackColor;
+  }
+
+  &__plus-btn::before {
+    transform: rotate(90deg);
+  }
+
+  &__current-count {
+    padding-top: 15px;
+  }
+}
+
+.btn-block {
+
+  &__button-prev,
+  &__button-next {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+    color: $blackColor;
+    border: $primaryBorder;
+    border-radius: $primaryRadius;
+    background: $whiteColor;
+  }
+
+  &__button-next::after,
+  &__button-prev::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    width: 15px;
+    height: 15px;
+    border-top: 2px solid $blackColor;
+    border-right: 2px solid $blackColor;
+  }
+
+  &__button-prev::after {
+    left: 15px;
+    transform: rotate(225deg);
+  }
+
+  &__button-next::after {
+    right: 15px;
+    transform: rotate(45deg);
+  }
+}
+
+
+.swiper-button-disabled {
+  opacity: 0.5;
+}

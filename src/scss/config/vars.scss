@@ -1,0 +1,36 @@
+$maxWidth: 1920; // максимальная ширина страницы
+$minWidth: 320; // минимальная ширина телефона
+$maxWidthContainer: 1588px; // ширина контейнера с учетом padding слева и справа
+$containerWidth: 1568px; // ширина контейнера из макета
+$containerInner: 1396px;
+$mainOffset: 10; // отступы безопасности для контейнера
+
+$mainFont: 'Rubik'; // !указать здесь основное семейство шрифта
+$mainWeight: 400; // !указать здесь основное начертание шрифта
+
+$primaryRadius: rem(5);
+
+$whiteColor: #fff;
+$whiteColor80: rgba(255, 255, 255, .8);
+$blackColor: #000;
+$primaryGrayColor: rgba(83, 86, 88, 1);
+$secondaryGrayColor: rgba(236, 240, 244, 1);
+$grayColorPrice: rgba(141, 146, 149, 1);
+$redColor: rgba(219, 55, 55, 1);
+$yellow: rgba(241, 210, 100, 1);
+$yellowDark: rgb(141, 108, 0);
+
+$firstAccentColor: $blackColor;
+$secondAccentColor: $primaryGrayColor;
+
+$fontFamily: $mainFont, sans-serif; // Семейство шрифта по умолчанию
+$fontColor: $blackColor; // Цвет шрифта по умолчанию
+$fontSize: rem(14); // Размер шрифта по умолчанию
+$fontWeight: $mainWeight; // Жирность шрифта по умолчанию
+
+$btnBoxShadow: 0px 2px 3px rgba($yellow, 10%), 0px 8px 3px rgba($yellowDark, 10%);
+$blackBoxShadow: 0px 2px 3px rgba($blackColor, 10%), 0px 8px 3px rgba($blackColor, 10%);
+
+$standartTrans: all 280ms ease-in-out 0ms;
+
+$primaryBorder: 1px solid $secondaryGrayColor;

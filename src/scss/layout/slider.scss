@@ -1,0 +1,111 @@
+// .swiper {
+//    max-width: $containerInner;
+//    width: 100%;
+//    margin: 0 auto;
+//    overflow: hidden;
+//    list-style: none;
+//    padding: 0;
+//    z-index: 1;
+// }
+
+// .swiper-wrapper {
+//    width: 100%;
+//    height: 100%;
+//    z-index: 1;
+//    display: flex;
+//    transition-property: transform;
+//    box-sizing: content-box;
+// }
+
+// .swiper-android .swiper-slide,
+// .swiper-wrapper {
+//    transform: translate3d(0px, 0, 0);
+// }
+
+// .swiper-pointer-events {
+//    touch-action: pan-y;
+// }
+
+// .swiper-slide {
+//    flex-shrink: 0;
+//    width: 100%;
+//    height: 100%;
+//    // transition-property: transform;
+// }
+
+// .swiper-slide-invisible-blank {
+//    visibility: hidden;
+// }
+
+// .swiper-autoheight,
+// .swiper-autoheight .swiper-slide {
+//    height: auto;
+// }
+
+// .swiper-autoheight .swiper-wrapper {
+//    align-items: flex-start;
+//    transition-property: transform, height;
+// }
+
+// .swiper-backface-hidden .swiper-slide {
+//    transform: translateZ(0);
+//    -webkit-backface-visibility: hidden;
+//    backface-visibility: hidden;
+// }
+
+
+// .slide {
+//    display: flex;
+//    flex-direction: column;
+//    align-items: center;
+//    justify-content: center;
+
+//    & img {
+//       width: 100%;
+//       object-fit: cover;
+//    }
+// }
+
+// .swiper-button-next,
+// .swiper-button-prev {
+//    position: relative;
+//    width: 40px;
+//    height: 40px;
+//    text-align: center;
+//    cursor: pointer;
+// }
+
+// .swiper-button-next::after,
+// .swiper-button-prev::before {
+//    content: '';
+//    top: 9px;
+//    width: 20px;
+//    height: 20px;
+//    border-top: 2px solid $blackColor;
+//    border-right: 2px solid $blackColor;
+//    position: absolute;
+// }
+
+// div.swiper-button-next,
+// div.swiper-button-prev {
+//    top: 70%;
+//    width: 20px;
+//    height: 20px;
+// }
+
+// Для отключения круговой прокрутки (цвет задизабленной стрелки)
+// .swiper-button-disabled::after,
+// .swiper-button-disabled::before {
+//    border-top-color: $grayColorPrice;
+//    border-right-color: $grayColorPrice;
+// }
+
+// .swiper-button-prev::before {
+//    left: 12px;
+//    transform: rotate(220deg);
+// }
+
+// .swiper-button-next::after {
+//    right: 12px;
+//    transform: rotate(45deg);
+// }

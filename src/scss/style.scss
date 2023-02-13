@@ -1,0 +1,32 @@
+@use 'sass:math';
+
+// Подключение шрифтов локально из папки "./src/fonts"
+@import 'config/fonts';
+
+// Подключение sass функций и миксинов и рассширений стилей 
+@import 'config/functions';
+
+// Подключение переменных 
+@import 'config/vars';
+
+// Обнуление 
+@import 'config/reset';
+
+// Шрифты 
+@import 'config/typography';
+
+// Базовые стили 
+@import 'config/base';
+
+// AOS анимация 
+// @import 'libs/aos';
+
+@import 'libs/swiper';
+@import 'libs/imgSlider';
+
+// Подключение стилей отдельных блоков и секций 
+@import 'layout/buttons';
+@import 'layout/links';
+// @import 'layout/slider';
+@import 'layout/promo';
+@import 'layout/cartProduct';
