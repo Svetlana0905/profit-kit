@@ -1,15 +1,26 @@
 import { isWebp, activeLink } from './modules'
 import { nextBtnSwiper, prevBtnSwiper, promoNav } from './helpers/elementsNodeList'
 import AOS from 'aos'
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination, Mousewheel, Keyboard, EffectFlip } from 'swiper';
 
 window['FLS'] = true
 
 const swiper = new Swiper('.swiper', {
-   modules: [Navigation],
+   modules: [Navigation, Mousewheel, Keyboard],
    navigation: {
       nextEl: nextBtnSwiper,
       prevEl: prevBtnSwiper
+   },
+   // Управление клавиатурой
+   keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+      pageUpDown: true,
+   },
+   // Управление колесом мыши
+   mousewheel: {
+      sensitivity: 1,
+      eventsTarget: ".swiper"
    },
    grabCursor: false,
    slidesPerView: 1,
@@ -37,7 +48,7 @@ const swiper = new Swiper('.swiper', {
 })
 
 let myImageSlider1 = new Swiper('.image-slider1', {
-   modules: [Pagination],
+   modules: [Pagination, EffectFlip],
    slidesPerView: 1,
    pagination: {
       el: '.swiper-pagination',
@@ -45,11 +56,14 @@ let myImageSlider1 = new Swiper('.image-slider1', {
       clickable: true,
    },
    nested: true,
-   effect: "flip",
+   effect: 'flip',
+   loop: true,
    grabCursor: true,
+   speed: 500,
+
 })
 let myImageSlider2 = new Swiper('.image-slider2', {
-   modules: [Pagination],
+   modules: [Pagination, EffectFlip],
    slidesPerView: 1,
    pagination: {
       el: '.swiper-pagination',
@@ -57,11 +71,13 @@ let myImageSlider2 = new Swiper('.image-slider2', {
       clickable: true,
    },
    nested: true,
-   effect: "flip",
+   effect: 'flip',
+   loop: true,
    grabCursor: true,
+   speed: 500,
 })
 let myImageSlider3 = new Swiper('.image-slider3', {
-   modules: [Pagination],
+   modules: [Pagination, EffectFlip],
    slidesPerView: 1,
    pagination: {
       el: '.swiper-pagination',
@@ -69,11 +85,13 @@ let myImageSlider3 = new Swiper('.image-slider3', {
       clickable: true,
    },
    nested: true,
-   effect: "flip",
+   effect: 'flip',
+   loop: true,
    grabCursor: true,
+   speed: 500,
 })
 let myImageSlider4 = new Swiper('.image-slider4', {
-   modules: [Pagination],
+   modules: [Pagination, EffectFlip],
    slidesPerView: 1,
    pagination: {
       el: '.swiper-pagination',
@@ -81,8 +99,10 @@ let myImageSlider4 = new Swiper('.image-slider4', {
       clickable: true,
    },
    nested: true,
-   effect: "flip",
+   effect: 'flip',
+   loop: true,
    grabCursor: true,
+   speed: 500,
 })
 
 isWebp()
