@@ -3,20 +3,6 @@
   width: 100%;
   position: relative;
   margin: 0 auto;
-
-  &__btn-block {
-    width: 100%;
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    top: 46%;
-    z-index: 1000;
-
-    @include media(768) {
-      display: none;
-    }
-  }
 }
 
 .primary-swiper {
@@ -33,6 +19,22 @@
     display: flex;
     transition-property: transform;
     box-sizing: content-box;
+  }
+
+  &__button-prev,
+  &__button-next {
+    position: absolute;
+    align-items: center;
+    top: 46%;
+    z-index: 1000;
+
+    @include media(768) {
+      display: none;
+    }
+  }
+
+  &__button-next {
+    right: 0;
   }
 }
 
@@ -205,43 +207,6 @@
     padding-top: 15px;
   }
 }
-
-.btn-block {
-
-  &__button-prev,
-  &__button-next {
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    cursor: pointer;
-    color: $blackColor;
-    border: $primaryBorder;
-    border-radius: $primaryRadius;
-    background: $whiteColor;
-  }
-
-  &__button-next::after,
-  &__button-prev::after {
-    content: '';
-    position: absolute;
-    top: 15px;
-    width: 15px;
-    height: 15px;
-    border-top: 2px solid $blackColor;
-    border-right: 2px solid $blackColor;
-  }
-
-  &__button-prev::after {
-    left: 15px;
-    transform: rotate(225deg);
-  }
-
-  &__button-next::after {
-    right: 15px;
-    transform: rotate(45deg);
-  }
-}
-
 
 .swiper-button-disabled {
   opacity: 0.5;
